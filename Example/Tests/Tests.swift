@@ -2,7 +2,7 @@
 
 import Quick
 import Nimble
-import DarkMagic
+//import DarkMagic
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {

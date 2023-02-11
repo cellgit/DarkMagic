@@ -1,9 +1,9 @@
 use_frameworks!
 
-platform :ios, '10.0'
+platform :ios, '11.0'
 
 target 'DarkMagic_Example' do
-  pod 'DarkMagic', :path => '../'
+  #pod 'DarkMagic', :path => '../'
 
   target 'DarkMagic_Tests' do
     inherit! :search_paths
