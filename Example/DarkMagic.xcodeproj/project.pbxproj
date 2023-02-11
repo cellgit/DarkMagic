@@ -16,6 +16,9 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		7CD1A956DD7C24847C071F4A /* Pods_DarkMagic_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250F47A8A0BE6406D21AAA9E /* Pods_DarkMagic_Example.framework */; };
 		CE09C2DF29974B12002A3964 /* PanGestureViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09C2DE29974B11002A3964 /* PanGestureViewProtocol.swift */; };
+		CE09C2E229975A73002A3964 /* PanGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09C2E129975A73002A3964 /* PanGestureViewController.swift */; };
+		CE09C2E429978276002A3964 /* DMUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09C2E329978276002A3964 /* DMUserDefaults.swift */; };
+		CE09C2E6299782FA002A3964 /* DMUserDefaultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09C2E5299782FA002A3964 /* DMUserDefaultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		CA3ACF1CB7BBCDA98BE581DA /* DarkMagic.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DarkMagic.podspec; path = ../DarkMagic.podspec; sourceTree = "<group>"; };
 		CC2A6F49CC62C10BD52FF765 /* Pods_DarkMagic_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DarkMagic_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE09C2DE29974B11002A3964 /* PanGestureViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanGestureViewProtocol.swift; sourceTree = "<group>"; };
+		CE09C2E129975A73002A3964 /* PanGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanGestureViewController.swift; sourceTree = "<group>"; };
+		CE09C2E329978276002A3964 /* DMUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMUserDefaults.swift; sourceTree = "<group>"; };
+		CE09C2E5299782FA002A3964 /* DMUserDefaultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMUserDefaultsViewController.swift; sourceTree = "<group>"; };
 		D0BF83099BB5F6F1401BFCF4 /* Pods-DarkMagic_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkMagic_Example.debug.xcconfig"; path = "Target Support Files/Pods-DarkMagic_Example/Pods-DarkMagic_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,8 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* Example for DarkMagic */,
 				CE09C2DD29974B11002A3964 /* Classes */,
+				607FACD21AFB9204008FA782 /* Example for DarkMagic */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				F446ED99CEA3ABCB27CBBAE0 /* Pods */,
@@ -98,6 +104,8 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				CE09C2E129975A73002A3964 /* PanGestureViewController.swift */,
+				CE09C2E5299782FA002A3964 /* DMUserDefaultsViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -155,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				CE09C2DE29974B11002A3964 /* PanGestureViewProtocol.swift */,
+				CE09C2E329978276002A3964 /* DMUserDefaults.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -181,6 +190,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
+				CE09C2E7299783B6002A3964 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -337,6 +347,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CE09C2E7299783B6002A3964 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -344,8 +371,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE09C2E429978276002A3964 /* DMUserDefaults.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				CE09C2E6299782FA002A3964 /* DMUserDefaultsViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				CE09C2E229975A73002A3964 /* PanGestureViewController.swift in Sources */,
 				CE09C2DF29974B12002A3964 /* PanGestureViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
