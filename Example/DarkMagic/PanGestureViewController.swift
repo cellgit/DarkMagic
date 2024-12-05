@@ -65,7 +65,7 @@ extension PanGestureViewController: PanGestureViewProtocol {
         Layout.containerViewHeight
     }
     var autoDismissHeight: CGFloat? {
-        500
+        300
     }
     var duration: CGFloat? {
         0.2

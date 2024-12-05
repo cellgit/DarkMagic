@@ -59,7 +59,7 @@ extension PanGestureViewProtocol {
         } else {
             let screenHeight = UIScreen.main.bounds.size.height
             let screenWidth = UIScreen.main.bounds.size.width
-            self.targetView?.frame = CGRect(x: 0, y: screenHeight-height, width: screenWidth, height: targetViewHeight)
+            targetView.frame = CGRect(x: 0, y: screenHeight-height, width: screenWidth, height: targetViewHeight)
             switch pan.state {
             case .began:
                 break
